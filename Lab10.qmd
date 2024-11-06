@@ -8,13 +8,10 @@ embed-resources: true
 # Setup
 ```{r}
 # install.packages(c("RSQLite", "DBI"))
-
 library(RSQLite)
 library(DBI)
-
 # Initialize a temporary in memory database
 con <- dbConnect(SQLite(), ":memory:")
-
 # Download tables
 actor <- read.csv("https://raw.githubusercontent.com/ivanceras/sakila/master/csv-sakila-db/actor.csv")
 rental <- read.csv("https://raw.githubusercontent.com/ivanceras/sakila/master/csv-sakila-db/rental.csv")
